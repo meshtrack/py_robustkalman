@@ -13,8 +13,8 @@ import matplotlib
 import sys
 sys.path.insert(0, '..')
 
-from robust_kalman import RobustKalman
-from robust_kalman.utils import HuberScore, VariablesHistory, WindowStatisticsEstimator
+from pyrobustkalman import RobustKalman
+from pyrobustkalman.utils import HuberScore, VariablesHistory, WindowStatisticsEstimator
 
 np.random.seed(256)
 

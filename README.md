@@ -4,14 +4,14 @@
 
 Python implementation of a robust Kalman estimator using so called M-robust estimation with support for adaptive noise variance estimation. Robust estimation is used to give better estimates when the data is polluted by outliers (see figure above).
 
-Implementation is based on the method presented in the paper [Robust Estimation with Unknown Noise Statistics](http://ieeexplore.ieee.org/abstract/document/769393/). Main difference is that iterative Nelder-Mead algorithm is used for nonlinear minimization problems instead of approximate linear method proposed by original authors (one may try out other methods if interested by editing [the code](robust_kalman/robust_kalman.py#L127)). Adaptive variance estimation is implemented only for measurement noise.
+Implementation is based on the method presented in the paper [Robust Estimation with Unknown Noise Statistics](http://ieeexplore.ieee.org/abstract/document/769393/). Main difference is that iterative Nelder-Mead algorithm is used for nonlinear minimization problems instead of approximate linear method proposed by original authors (one may try out other methods if interested by editing [the code](pyrobustkalman/core.py#L127)). Adaptive variance estimation is implemented only for measurement noise.
 
 ## Usage
 Robust Kalman may be easily integrated in the user's code using few intuitive API calls as shown in the sample below.
 
 ```python
 # Import RobustKalman provided by the package in this repo
-from robust_kalman import RobustKalman
+from pyrobustkalman import RobustKalman
 
 # Create the estimator by passing model parameters
 kalman = RobustKalman(F, B, H, x0, P0, Q0, R0, use_robust_estimation=True)
