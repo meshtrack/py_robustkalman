@@ -9,6 +9,14 @@ class HuberScore:
     def __init__(self, delta=1.5):
         self._delta = delta
 
+    @property
+    def delta(self) -> float:
+        return self._delta
+
+    @delta.setter
+    def delta(self, value: float):
+        self._delta = value
+
     def evaluate(self, z):
         if abs(z) >= self._delta:
             return self._delta * abs(z) - pow(self._delta, 2) / 2.0
@@ -17,6 +25,7 @@ class HuberScore:
 
     def derivative(self, z):
         raise NotImplemented
+
 
 
 class VariablesHistory:

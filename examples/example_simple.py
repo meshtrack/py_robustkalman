@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.insert(0, '..')
 
-from pyrobustkalman import RobustKalman
+from pyrobustkalman.core import RobustKalman
 from pyrobustkalman.utils import HuberScore, VariablesHistory, WindowStatisticsEstimator
 
 # Define a linear state space model
